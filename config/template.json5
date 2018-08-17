@@ -1,0 +1,14 @@
+{
+    alexa : {
+        app_id : ""
+    },
+    opendata : {
+        host : "https://opendata.lillemetropole.fr/api/records/1.0/search/",
+        dataset : "vlille-realtime"
+    },
+    google_map_api : {
+        api_key : "",
+        api_key_geo : "",
+        end_point : "https://maps.googleapis.com/maps/api/staticmap"
+    }
+}

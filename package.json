@@ -1,0 +1,20 @@
+{
+  "name": "alexa-skill-kit-sdk-factskill",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "mocha --timeout 15000 ./tests/*.test.js",
+    "zip": "zip -r v_lille_alexa.zip .",
+    "publish": "aws lambda update-function-code --function-name v-lille-lanbda --zip-file fileb:///Users/caronthomas/Documents/Project/alexa/v_lille/v_lille_alexa.zip",
+    "deploy": "npm run zip && npm run publish"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "config": "^2.0.1",
+    "request": "^2.87.0"
+  }
+}
