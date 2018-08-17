@@ -13,15 +13,15 @@ async function SearchStationIntentResponse(station) {
                     break;
                 case (stationEnum.STATION_CLOSED):
                     if (station.forward == null)
-                        resolve(`Désoler, mais la station ${station.name} est fermé. Et je n'ai trouvé aucune autre station disponible dans un rayon de 500 mètres de cette station.`)
+                        resolve(`Désolé, mais la station ${station.name} est fermé. Et je n'ai trouvé aucune autre station disponible dans un rayon de 500 mètres de cette station.`)
                     else
-                        resolve(`Désoler, mais la station ${station.name} est fermé. Néanmoins, la station la plus proche est ${station.forward.name}, elle dispose de ${station.forward.nbrBike} vélo${station.forward.nbrBike != 1 ? 's' : ''}.`);
+                        resolve(`Désolé, mais la station ${station.name} est fermé. Néanmoins, la station la plus proche est ${station.forward.name}, elle dispose de ${station.forward.nbrBike} vélo${station.forward.nbrBike != 1 ? 's' : ''}.`);
                     break;
                 case (stationEnum.STATION_EMPTY):
                     if (station.forward == null)
-                        resolve(`Désoler, mais la station ${station.name} est vide. Et je n'ai trouvé aucune autre station disponible dans un rayon de 500 mètres de cette station.`)
+                        resolve(`Désolé, mais la station ${station.name} est vide. Et je n'ai trouvé aucune autre station disponible dans un rayon de 500 mètres de cette station.`)
                     else
-                        resolve(`Désoler, mais la station ${station.name} est vide. Néanmoins, la station la plus proche est ${station.forward.name}, elle dispose de ${station.forward.nbrBike} vélo${station.forward.nbrBike != 1 ? 's' : ''}.`);
+                        resolve(`Désolé, mais la station ${station.name} est vide. Néanmoins, la station la plus proche est ${station.forward.name}, elle dispose de ${station.forward.nbrBike} vélo${station.forward.nbrBike != 1 ? 's' : ''}.`);
                     break;
                 case (stationEnum.STATION_FULL):
                     resolve(`La station ${station.name} est pleine, il y a actuellement ${station.nbrBike} vélo${station.nbrBike != 1 ? 's' : ''}.`);
@@ -50,15 +50,15 @@ async function SearchStationIntentResponseCard(station) {
                     break;
                 case (stationEnum.STATION_CLOSED):
                     if (station.forward.kind == stationEnum.STATION_NOT_FOUND)
-                        resolve(`Désoler, mais la station ${station.name} est fermé. Et je n'ai trouvé aucune autre station disponible dans un rayon de 500 mètres de cette station.`)
+                        resolve(`Désolé, mais la station ${station.name} est fermé. Et je n'ai trouvé aucune autre station disponible dans un rayon de 500 mètres de cette station.`)
                     else
-                        resolve(`Désoler, mais la station ${station.name} est fermé. Néanmoins, la station la plus proche est ${station.forward.name}, elle dispose de ${station.forward.nbrBike} vélo${station.forward.nbrBike != 1 ? 's' : ''}.`);
+                        resolve(`Désolé, mais la station ${station.name} est fermé. Néanmoins, la station la plus proche est ${station.forward.name}, elle dispose de ${station.forward.nbrBike} vélo${station.forward.nbrBike != 1 ? 's' : ''}.`);
                     break;
                 case (stationEnum.STATION_EMPTY):
                     if (station.forward.kind == stationEnum.STATION_NOT_FOUND)
-                        resolve(`Désoler, mais la station ${station.name} est vide. Et je n'ai trouvé aucune autre station disponible dans un rayon de 500 mètres de cette station.`)
+                        resolve(`Désolé, mais la station ${station.name} est vide. Et je n'ai trouvé aucune autre station disponible dans un rayon de 500 mètres de cette station.`)
                     else
-                        resolve(`Désoler, mais la station ${station.name} est vide. Néanmoins, la station la plus proche est ${station.forward.name}, elle dispose de ${station.forward.nbrBike} vélo${station.forward.nbrBike != 1 ? 's' : ''}.`);
+                        resolve(`Désolé, mais la station ${station.name} est vide. Néanmoins, la station la plus proche est ${station.forward.name}, elle dispose de ${station.forward.nbrBike} vélo${station.forward.nbrBike != 1 ? 's' : ''}.`);
                     break;
                 case (stationEnum.STATION_FULL):
                     resolve(`La station ${station.name} est pleine, il y a actuellement ${station.nbrBike} vélo${station.nbrBike != 1 ? 's' : ''}.`);
